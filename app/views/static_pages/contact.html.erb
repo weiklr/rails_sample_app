@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <% provide(:title, "Contact") %>
+    <title><%= yield(:title) %></title>
   </head>
   <body>
-    <h1>About</h1>
+    <h1>Contact</h1>
     <p>
       The <a href="https://www.railstutorial.org/"><em>Ruby on Rails
       Tutorial</em></a>, part of the
