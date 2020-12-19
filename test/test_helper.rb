@@ -11,4 +11,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # create test-specific helper method to check login as helper methods are available in tests so can't use @current_user to check
+  # we called this is_logged_in to differentiate from the actual method logged_in used in dev and production env
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end
