@@ -3,11 +3,13 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
+    
     if @user && @user.authenticate(params[:session][:password])
       # login
       # prevents sesssion fixation attacks by reseting the session id
       reset_session
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
+      cookies['simple'] = "TEST!!!!"
       log_in @user
       redirect_to @user
 

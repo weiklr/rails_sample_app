@@ -5,7 +5,7 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
-  parallelize(workers: :number_of_processors)
+  # parallelize(workers: :number_of_processors)
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
@@ -33,8 +33,10 @@ class ActionDispatch::IntegrationTest
   # in both cases because it lets us do things like use code 
   # from a controller test in an integration test without making any changes to the login method
   def log_in_as(user, password: 'password', remember_me: '1')
-    post login_path, params: { session: { email: user.email,
-                                          ​password: password,
-                                          ​remember_me: remember_me } }
+    session = { email: user.email,
+      password: password, 
+      remember_me: remember_me }
+      
+    post login_path, params: { session: session }
   end
 end
