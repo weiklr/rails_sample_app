@@ -3,15 +3,16 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:session][:email].downcase)
-    
+
     if @user && @user.authenticate(params[:session][:password])
+      forwarding_url = session[:forwarding_url]
       # login
       # prevents sesssion fixation attacks by reseting the session id
       reset_session
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
-      cookies['simple'] = "TEST!!!!"
+      cookies['simple'] = 'TEST!!!!'
       log_in @user
-      redirect_to @user
+      redirect_to forwarding_url || @user
 
     else
       flash.now[:danger] = 'Invalid email/password combination'
