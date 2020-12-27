@@ -32,8 +32,23 @@ class User < ApplicationRecord
   # Defines a proto-feed.
   # See "Following users" for the full implementation.
   # ensures that id is properly escaped before being included in the underlying SQL query, to prevent sql injection
+
+  # The question mark syntax is fine, but when we want the same variable
+  # inserted in more than one place, the second syntax (using variables) is more convenient.
+  # using sub seleet is more memory efficient, when the user has alot of followers.
+  # user_id IN (?) means we are putting all of the users' follower_ids in memory.
+  # def feed
+  #   following_ids = "SELECT followed_id FROM relationships
+  #                    WHERE  follower_id = :user_id"
+  #   Micropost.where("user_id IN (#{following_ids})
+  #                    OR user_id = :user_id", user_id: id)
+  # end
+
+  # Returns a user's status feed.
   def feed
-    Micropost.where('user_id = ?', id)
+    part_of_feed = 'relationships.follower_id = :id or microposts.user_id = :id'
+    Micropost.left_outer_joins(user: :followers)
+             .where(part_of_feed, { id: id })
   end
 
   # Follows a user.
