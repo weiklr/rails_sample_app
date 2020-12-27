@@ -3,7 +3,7 @@ require 'test_helper'
 class MicropostTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
-    # This code is not idiomatically correct.
+    # Returns a new Micropost object associated with user, note that we can specify args specific to micropost
     @micropost = @user.microposts.build(content: 'Lorem ipsum')
   end
 

@@ -99,7 +99,8 @@ class User < ApplicationRecord
     remember_digest || remember
   end
 
-  # Returns true if the given token matches the digest.
+  # Returns true if the given token (remember_token or activation_token) matches the digest.
+  # this also compares password digest at login
   def authenticated?(attribute, token)
     token_digest = send("#{attribute}_digest")
 
