@@ -1,0 +1,8 @@
+<%
+# remote:true sets the variable data-remote="true" inside the form tag, 
+# which tells Rails to allow the form to be handled by JavaScript. By using a simple HTM
+%>
+<%= form_with(model: current_user.active_relationships.find_by(followed_id: @user.id),
+             html: { method: :delete }, remote: true) do |f| %>
+  <%= f.submit "Unfollow", class: "btn" %>
+<% end %>

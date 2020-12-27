@@ -18,9 +18,16 @@ Rails.application.routes.draw do
 
   # get     '/microposts',  to: 'static_pages#home'
   # generates all GET, POST, PUT, PATCH, DELETE urls
-  resources :users
+  # creates get end points for /users/{id}/following and /users/followers
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts,          only: %i[create destroy]
+  resources :relationships,       only: %i[create destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

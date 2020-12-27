@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: 'Relationship',
                                    foreign_key: 'followed_id',
                                    dependent: :destroy
-  # allow us to check another entity exist from the parent. e.g.
+
+  # creates accessors 'followed' and 'follower' that allow us to check another entity exist from the parent. e.g.
   # user.following.include?(other_user)
   # user.following.find(other_user)
   has_many :following, through: :active_relationships, source: :followed

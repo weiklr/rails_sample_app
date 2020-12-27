@@ -37,4 +37,13 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     # assert_equal @other_user.password_digest, User.digest('password')
     assert_not @other_user.admin?
   end
+  test 'should redirect following when not logged in' do
+    get following_user_path(@user)
+    assert_redirected_to login_url
+  end
+
+  test 'should redirect followers when not logged in' do
+    get followers_user_path(@user)
+    assert_redirected_to login_url
+  end
 end
