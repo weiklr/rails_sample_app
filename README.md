@@ -6,6 +6,8 @@ Learn Web Development with Rails_](https://www.railstutorial.org/)
 (6th Edition)
 by [Michael Hartl](https://www.michaelhartl.com/).
 
+hosted on: https://vast-bastion-77756.herokuapp.com/
+
 ## License
 
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
