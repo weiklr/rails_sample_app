@@ -15,12 +15,12 @@ gem 'faker',                      '2.11.0'
 gem 'image_processing',           '1.9.3'
 gem 'jbuilder',                   '2.11.5'
 gem 'mini_magick',                '4.9.5'
-gem 'puma',                       '5.0.4'
+gem 'puma',                       '5.6.2'
 gem 'rails',                      '6.0.3.4'
 gem 'sass-rails',                 '6.0.0'
 gem 'turbolinks',                 '5.2.1'
 gem 'webpacker',                  '4.2.2'
-gem 'will_paginate',              '3.3.0'
+gem 'will_paginate',              '3.3.1'
 
 group :development, :test do
   gem 'byebug',  '11.1.3', platforms: %i[mri mingw x64_mingw]
@@ -28,7 +28,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen',                '3.2.1'
+  gem 'listen',                '3.7.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
   gem 'web-console',           '4.0.2'
