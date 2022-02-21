@@ -6,13 +6,13 @@ ruby '2.7.2'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'active_storage_validations', '0.8.9'
+gem 'active_storage_validations', '0.9.6'
 gem 'bcrypt',                     '3.1.16'
-gem 'bootsnap',                   '1.4.6', require: false
+gem 'bootsnap',                   '1.10.3', require: false
 gem 'bootstrap-sass',             '3.4.1'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'faker',                      '2.19.0'
-gem 'image_processing',           '1.9.3'
+gem 'image_processing',           '1.12.1'
 gem 'jbuilder',                   '2.11.5'
 gem 'mini_magick',                '4.11.0'
 gem 'puma',                       '5.6.2'
@@ -31,7 +31,7 @@ group :development do
   gem 'listen',                '3.7.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
-  gem 'web-console',           '4.0.2'
+  gem 'web-console',           '4.2.0'
 end
 
 group :test do
