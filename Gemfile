@@ -19,7 +19,7 @@ gem 'puma',                       '5.6.2'
 gem 'rails',                      '6.0.3.4'
 gem 'sass-rails',                 '6.0.0'
 gem 'turbolinks',                 '5.2.1'
-gem 'webpacker',                  '4.2.2'
+gem 'webpacker',                  '5.4.3'
 gem 'will_paginate',              '3.3.1'
 
 group :development, :test do
@@ -47,7 +47,7 @@ end
 
 group :production do
   gem 'aws-sdk-s3', '1.46.0', require: false
-  gem 'pg',         '1.2.3'
+  gem 'pg',         '1.3.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
