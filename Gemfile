@@ -11,7 +11,7 @@ gem 'bcrypt',                     '3.1.13'
 gem 'bootsnap',                   '1.4.6', require: false
 gem 'bootstrap-sass',             '3.4.1'
 gem 'bootstrap-will_paginate',    '1.0.0'
-gem 'faker',                      '2.11.0'
+gem 'faker',                      '2.19.0'
 gem 'image_processing',           '1.9.3'
 gem 'jbuilder',                   '2.10.0'
 gem 'mini_magick',                '4.9.5'
