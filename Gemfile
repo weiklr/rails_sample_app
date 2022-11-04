@@ -35,7 +35,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara',                 '3.36.0'
+  gem 'capybara',                 '3.38.0'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.6'
   gem 'minitest',                 '5.15.0'
