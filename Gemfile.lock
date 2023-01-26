@@ -84,7 +84,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootsnap (1.10.3)
+    bootsnap (1.16.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -161,7 +161,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    msgpack (1.4.5)
+    msgpack (1.6.0)
     nenv (0.3.0)
     nio4r (2.5.8)
     nokogiri (1.13.1)
@@ -288,7 +288,7 @@ DEPENDENCIES
   active_storage_validations (= 0.9.6)
   aws-sdk-s3 (= 1.112.0)
   bcrypt (= 3.1.16)
-  bootsnap (= 1.10.3)
+  bootsnap (= 1.16.0)
   bootstrap-sass (= 3.4.1)
   bootstrap-will_paginate (= 1.0.0)
   byebug (= 11.1.3)

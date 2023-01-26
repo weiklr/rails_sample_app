@@ -8,7 +8,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'active_storage_validations', '0.9.6'
 gem 'bcrypt',                     '3.1.16'
-gem 'bootsnap',                   '1.10.3', require: false
+gem 'bootsnap',                   '1.16.0', require: false
 gem 'bootstrap-sass',             '3.4.1'
 gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'faker',                      '2.19.0'
